@@ -1,0 +1,873 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7AF0724B-C953-41B6-B03B-672A777CAAD2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PMMarkingUI</RootNamespace>
+    <AssemblyName>PMMarkingUI</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>false</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>false</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>055EA411E79E0693AFDCD7FD625AD09639215105</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>PMMarkingUI_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dialogs.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraDialogs.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="ExcelDataReader, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.3.6.0\lib\net45\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.DataSet.3.6.0\lib\net35\ExcelDataReader.DataSet.dll</HintPath>
+    </Reference>
+    <Reference Include="FirebirdSql.Data.FirebirdClient, Version=7.5.0.0, Culture=neutral, PublicKeyToken=3750abcc3150b00c, processorArchitecture=MSIL">
+      <HintPath>..\packages\FirebirdSql.Data.FirebirdClient.7.5.0\lib\net452\FirebirdSql.Data.FirebirdClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Threading.Tasks" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Additional.cs" />
+    <Compile Include="Classes\Extension.cs" />
+    <Compile Include="Classes\PacketCommand\Result.cs" />
+    <Compile Include="Classes\PacketCommand\Worker.cs" />
+    <Compile Include="Classes\Processing.cs" />
+    <Compile Include="Classes\Sys.cs" />
+    <Compile Include="Classes\Sys.Global.cs" />
+    <Compile Include="Classes\XmlClasses.cs" />
+    <Compile Include="Delegats\Delegats.cs" />
+    <Compile Include="Forms\Documents\frmCreateDocument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Documents\frmCreateDocument.Designer.cs">
+      <DependentUpon>frmCreateDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Documents\frmCreateDocumentHandle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Documents\frmCreateDocumentHandle.Designer.cs">
+      <DependentUpon>frmCreateDocumentHandle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Documents\frmCreateDocumentOutcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Documents\frmCreateDocumentOutcome.Designer.cs">
+      <DependentUpon>frmCreateDocumentOutcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Documents\frmCreateDocumentOutcome_ShowSelected.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Documents\frmCreateDocumentOutcome_ShowSelected.Designer.cs">
+      <DependentUpon>frmCreateDocumentOutcome_ShowSelected.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Documents\frmDocument335.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Documents\frmDocument335.Designer.cs">
+      <DependentUpon>frmDocument335.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Documents\frmDocumentLinkToTW4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Documents\frmDocumentLinkToTW4.Designer.cs">
+      <DependentUpon>frmDocumentLinkToTW4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Documents\frmCreateDocumentActions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Documents\frmCreateDocumentActions.Designer.cs">
+      <DependentUpon>frmCreateDocumentActions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmGrid.Designer.cs">
+      <DependentUpon>frmGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmImportExcelForCreateDocument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmImportExcelForCreateDocument.Designer.cs">
+      <DependentUpon>frmImportExcelForCreateDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSerchByObjectList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSerchByObjectList.Designer.cs">
+      <DependentUpon>frmSerchByObjectList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSerchByObjectListResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSerchByObjectListResult.Designer.cs">
+      <DependentUpon>frmSerchByObjectListResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSgtinSerch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSgtinSerch.Designer.cs">
+      <DependentUpon>frmSgtinSerch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmStringList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmStringList.Designer.cs">
+      <DependentUpon>frmStringList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmProccess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmProccess.Designer.cs">
+      <DependentUpon>frmProccess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Counteragents\frmCounteragentAddressesLinks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Counteragents\frmCounteragentAddressesLinks.Designer.cs">
+      <DependentUpon>frmCounteragentAddressesLinks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Counteragents\frmCounteragentsLinks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Counteragents\frmCounteragentsLinks.Designer.cs">
+      <DependentUpon>frmCounteragentsLinks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Counteragents\frmCounteragentVerifyFinish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Counteragents\frmCounteragentVerifyFinish.Designer.cs">
+      <DependentUpon>frmCounteragentVerifyFinish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Documents\frmCreateChildDocument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Documents\frmCreateChildDocument.Designer.cs">
+      <DependentUpon>frmCreateChildDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Documents\frmDocumentAddSgtins.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Documents\frmDocumentAddSgtins.Designer.cs">
+      <DependentUpon>frmDocumentAddSgtins.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFilterRuntime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFilterRuntime.Designer.cs">
+      <DependentUpon>frmFilterRuntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRef.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRef.Designer.cs">
+      <DependentUpon>frmRef.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSetupManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSetupManager.Designer.cs">
+      <DependentUpon>frmSetupManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTest.Designer.cs">
+      <DependentUpon>frmTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTextBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTextBox.Designer.cs">
+      <DependentUpon>frmTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTextBoxDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTextBoxDate.Designer.cs">
+      <DependentUpon>frmTextBoxDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUsers.Designer.cs">
+      <DependentUpon>frmUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Counteragents\CounteragentsAddresses.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Counteragents\CounteragentsAddresses.Designer.cs">
+      <DependentUpon>CounteragentsAddresses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Counteragents\CounteragentsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Counteragents\CounteragentsView.Designer.cs">
+      <DependentUpon>CounteragentsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Counteragents\CounteragentView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Counteragents\CounteragentView.Designer.cs">
+      <DependentUpon>CounteragentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Documents\BadSsccView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Documents\BadSsccView.Designer.cs">
+      <DependentUpon>BadSsccView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Documents\DocumentMap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Documents\DocumentMap.Designer.cs">
+      <DependentUpon>DocumentMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Documents\DocumentsForAgencyContract.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Documents\DocumentsForAgencyContract.Designer.cs">
+      <DependentUpon>DocumentsForAgencyContract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Documents\DocumentSSCCView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Documents\DocumentSSCCView.Designer.cs">
+      <DependentUpon>DocumentSSCCView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Documents\CreateDocumentView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Documents\CreateDocumentView.Designer.cs">
+      <DependentUpon>CreateDocumentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Counteragents\CouteragentsAddressesLinksView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Counteragents\CouteragentsAddressesLinksView.Designer.cs">
+      <DependentUpon>CouteragentsAddressesLinksView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Documents\DocumentXmlBodyView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Documents\DocumentXmlBodyView.Designer.cs">
+      <DependentUpon>DocumentXmlBodyView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Documents\GTDView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Documents\GTDView.Designer.cs">
+      <DependentUpon>GTDView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Documents\HandleCreateDocBody\CreateDocBody415View.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Documents\HandleCreateDocBody\CreateDocBody415View.Designer.cs">
+      <DependentUpon>CreateDocBody415View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Documents\HandleCreateDocBody\CreateDocBody472View.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Documents\HandleCreateDocBody\CreateDocBody472View.Designer.cs">
+      <DependentUpon>CreateDocBody472View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Documents\HandleCreateDocBody\CreateDocBody701View.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Documents\HandleCreateDocBody\CreateDocBody701View.Designer.cs">
+      <DependentUpon>CreateDocBody701View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Documents\HandleCreateDocBody\CreateDocBodyUniversalView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Documents\HandleCreateDocBody\CreateDocBodyUniversalView.Designer.cs">
+      <DependentUpon>CreateDocBodyUniversalView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Documents\SerchFromDocumentsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Documents\SerchFromDocumentsView.Designer.cs">
+      <DependentUpon>SerchFromDocumentsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Documents\WhatWithDocView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Documents\WhatWithDocView.Designer.cs">
+      <DependentUpon>WhatWithDocView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Filters\DocFilterDbAgencyContractView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Filters\DocFilterDbAgencyContractView.Designer.cs">
+      <DependentUpon>DocFilterDbAgencyContractView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Filters\DocFilterTWDbView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Filters\DocFilterTWDbView.Designer.cs">
+      <DependentUpon>DocFilterTWDbView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Filters\DocFilterDbView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Filters\DocFilterDbView.Designer.cs">
+      <DependentUpon>DocFilterDbView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Filters\GridFilterView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Filters\GridFilterView.Designer.cs">
+      <DependentUpon>GridFilterView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Filters\GtdFilterView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Filters\GtdFilterView.Designer.cs">
+      <DependentUpon>GtdFilterView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Filters\MedProductView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Filters\MedProductView.Designer.cs">
+      <DependentUpon>MedProductView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Filters\MedProductsFilterView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Filters\MedProductsFilterView.Designer.cs">
+      <DependentUpon>MedProductsFilterView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Filters\DocFilterMdlpView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Filters\DocFilterMdlpView.Designer.cs">
+      <DependentUpon>DocFilterMdlpView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GenerateXmlOrderDetailView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\GenerateXmlOrderDetailView.Designer.cs">
+      <DependentUpon>GenerateXmlOrderDetailView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Goods\GoodsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Goods\GoodsView.Designer.cs">
+      <DependentUpon>GoodsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GtinInfoView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\GtinInfoView.Designer.cs">
+      <DependentUpon>GtinInfoView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Documents\TWDocumentView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Documents\TWDocumentView.Designer.cs">
+      <DependentUpon>TWDocumentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Documents\TWDocumentsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Documents\TWDocumentsView.Designer.cs">
+      <DependentUpon>TWDocumentsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Documents\DocumentsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Documents\DocumentsView.Designer.cs">
+      <DependentUpon>DocumentsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Documents\DocumentView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Documents\DocumentView.Designer.cs">
+      <DependentUpon>DocumentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Documents\GetDocumentsFromMdlpView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Documents\GetDocumentsFromMdlpView.Designer.cs">
+      <DependentUpon>GetDocumentsFromMdlpView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OrganizationsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\OrganizationsView.Designer.cs">
+      <DependentUpon>OrganizationsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SerchObjectsInMdlpByListView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\SerchObjectsInMdlpByListView.Designer.cs">
+      <DependentUpon>SerchObjectsInMdlpByListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SerchSsccInMdlpByListView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\SerchSsccInMdlpByListView.Designer.cs">
+      <DependentUpon>SerchSsccInMdlpByListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UsersView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UsersView.Designer.cs">
+      <DependentUpon>UsersView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WebMethodsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\WebMethodsView.Designer.cs">
+      <DependentUpon>WebMethodsView.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\Documents\frmCreateDocument.resx">
+      <DependentUpon>frmCreateDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Documents\frmCreateDocumentHandle.resx">
+      <DependentUpon>frmCreateDocumentHandle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Documents\frmCreateDocumentOutcome.resx">
+      <DependentUpon>frmCreateDocumentOutcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Documents\frmCreateDocumentOutcome_ShowSelected.resx">
+      <DependentUpon>frmCreateDocumentOutcome_ShowSelected.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Documents\frmCreateDocumentActions.resx">
+      <DependentUpon>frmCreateDocumentActions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Documents\frmDocument335.resx">
+      <DependentUpon>frmDocument335.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Documents\frmDocumentLinkToTW4.resx">
+      <DependentUpon>frmDocumentLinkToTW4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmGrid.resx">
+      <DependentUpon>frmGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmImportExcelForCreateDocument.resx">
+      <DependentUpon>frmImportExcelForCreateDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSerchByObjectList.resx">
+      <DependentUpon>frmSerchByObjectList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSerchByObjectListResult.resx">
+      <DependentUpon>frmSerchByObjectListResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSgtinSerch.resx">
+      <DependentUpon>frmSgtinSerch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmStringList.resx">
+      <DependentUpon>frmStringList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmProccess.resx">
+      <DependentUpon>frmProccess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Counteragents\frmCounteragentAddressesLinks.resx">
+      <DependentUpon>frmCounteragentAddressesLinks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Counteragents\frmCounteragentsLinks.resx">
+      <DependentUpon>frmCounteragentsLinks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Counteragents\frmCounteragentVerifyFinish.resx">
+      <DependentUpon>frmCounteragentVerifyFinish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Documents\frmCreateChildDocument.resx">
+      <DependentUpon>frmCreateChildDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Documents\frmDocumentAddSgtins.resx">
+      <DependentUpon>frmDocumentAddSgtins.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFilterRuntime.resx">
+      <DependentUpon>frmFilterRuntime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmRef.resx">
+      <DependentUpon>frmRef.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSetupManager.resx">
+      <DependentUpon>frmSetupManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTest.resx">
+      <DependentUpon>frmTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTextBox.resx">
+      <DependentUpon>frmTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTextBoxDate.resx">
+      <DependentUpon>frmTextBoxDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUsers.resx">
+      <DependentUpon>frmUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Counteragents\CounteragentsAddresses.resx">
+      <DependentUpon>CounteragentsAddresses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Counteragents\CounteragentsView.resx">
+      <DependentUpon>CounteragentsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Counteragents\CounteragentView.resx">
+      <DependentUpon>CounteragentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Counteragents\CouteragentsAddressesLinksView.resx">
+      <DependentUpon>CouteragentsAddressesLinksView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Documents\BadSsccView.resx">
+      <DependentUpon>BadSsccView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Documents\DocumentMap.resx">
+      <DependentUpon>DocumentMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Documents\DocumentsForAgencyContract.resx">
+      <DependentUpon>DocumentsForAgencyContract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Documents\DocumentSSCCView.resx">
+      <DependentUpon>DocumentSSCCView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Documents\CreateDocumentView.resx">
+      <DependentUpon>CreateDocumentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Documents\DocumentXmlBodyView.resx">
+      <DependentUpon>DocumentXmlBodyView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Documents\GTDView.resx">
+      <DependentUpon>GTDView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Documents\HandleCreateDocBody\CreateDocBody415View.resx">
+      <DependentUpon>CreateDocBody415View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Documents\HandleCreateDocBody\CreateDocBody472View.resx">
+      <DependentUpon>CreateDocBody472View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Documents\HandleCreateDocBody\CreateDocBody701View.resx">
+      <DependentUpon>CreateDocBody701View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Documents\HandleCreateDocBody\CreateDocBodyUniversalView.resx">
+      <DependentUpon>CreateDocBodyUniversalView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Documents\SerchFromDocumentsView.resx">
+      <DependentUpon>SerchFromDocumentsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Documents\WhatWithDocView.resx">
+      <DependentUpon>WhatWithDocView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Filters\DocFilterDbAgencyContractView.resx">
+      <DependentUpon>DocFilterDbAgencyContractView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Filters\DocFilterTWDbView.resx">
+      <DependentUpon>DocFilterTWDbView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Filters\DocFilterDbView.resx">
+      <DependentUpon>DocFilterDbView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Filters\GridFilterView.resx">
+      <DependentUpon>GridFilterView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Filters\GtdFilterView.resx">
+      <DependentUpon>GtdFilterView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Filters\MedProductView.resx">
+      <DependentUpon>MedProductView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Filters\MedProductsFilterView.resx">
+      <DependentUpon>MedProductsFilterView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Filters\DocFilterMdlpView.resx">
+      <DependentUpon>DocFilterMdlpView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\GenerateXmlOrderDetailView.resx">
+      <DependentUpon>GenerateXmlOrderDetailView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Goods\GoodsView.resx">
+      <DependentUpon>GoodsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\GtinInfoView.resx">
+      <DependentUpon>GtinInfoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Documents\TWDocumentView.resx">
+      <DependentUpon>TWDocumentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Documents\TWDocumentsView.resx">
+      <DependentUpon>TWDocumentsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Documents\DocumentsView.resx">
+      <DependentUpon>DocumentsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Classes\ApiAddresses.Ahunter.cs" />
+    <EmbeddedResource Include="Views\Documents\DocumentView.resx">
+      <DependentUpon>DocumentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Documents\GetDocumentsFromMdlpView.resx">
+      <DependentUpon>GetDocumentsFromMdlpView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OrganizationsView.resx">
+      <DependentUpon>OrganizationsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SerchObjectsInMdlpByListView.resx">
+      <DependentUpon>SerchObjectsInMdlpByListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SerchSsccInMdlpByListView.resx">
+      <DependentUpon>SerchSsccInMdlpByListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UsersView.resx">
+      <DependentUpon>UsersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\WebMethodsView.resx">
+      <DependentUpon>WebMethodsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Classes\WebMethods.cs" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\ok_gray.svg" />
+    <None Include="Images\ok_green.svg" />
+    <None Include="Images\ok_red.svg" />
+    <None Include="Images\ok_sand.svg" />
+    <None Include="Images\ok_blue.svg" />
+    <None Include="Images\ok_blue.png" />
+    <None Include="Images\ok_gray.png" />
+    <None Include="Images\ok_green.png" />
+    <None Include="Images\ok_red.png" />
+    <None Include="Images\ok_sand.png" />
+    <None Include="Images\stGetResponse.png" />
+    <None Include="Images\truck.png" />
+    <None Include="Images\action.png" />
+    <None Include="Images\icon_refresh_small.png" />
+    <None Include="Images\wait_for.png" />
+    <None Include="Images\arrow_right.png" />
+    <None Include="Images\arrow_right_down.png" />
+    <None Include="Images\finish.png" />
+    <None Include="Images\shema_start.png" />
+    <None Include="Images\box2.png" />
+    <None Include="Images\box3.png" />
+    <None Include="Images\box4.png" />
+    <None Include="Images\box5.png" />
+    <None Include="Images\box6.png" />
+    <None Include="Images\cart.png" />
+    <None Include="Images\cart2.png" />
+    <None Include="Images\cart3.png" />
+    <None Include="Images\folder.png" />
+    <None Include="Images\folder2.png" />
+    <None Include="Images\icon_link_del_old.png" />
+    <None Include="Images\ok_final.png" />
+    <None Include="Images\ok_preprogress.png" />
+    <None Include="Images\ok_progress.png" />
+    <None Include="Images\stCompose.png" />
+    <None Include="Images\stGetResponse1.png" />
+    <None Include="Images\stGetResponse2.png" />
+    <None Include="Images\stNew.png" />
+    <None Include="Images\stNew2.png" />
+    <None Include="Images\stNew3.png" />
+    <None Include="Images\stResponseProcessed.png" />
+    <None Include="Images\stResponseProcessed1.png" />
+    <None Include="Images\stSendResponse.png" />
+    <None Include="Images\stSendResponse1.png" />
+    <None Include="Images\stSendResponse2.png" />
+    <None Include="Images\truck_process.png" />
+    <None Include="Images\turnover_1.png" />
+    <None Include="Images\turnover_2.png" />
+    <None Include="Images\warning.png" />
+    <None Include="Images\warning2.png" />
+    <None Include="Images\box.png" />
+    <None Include="Images\arrow-to_top-left.png" />
+    <Content Include="logo.ico" />
+    <None Include="Images\logo.ico" />
+    <None Include="Images\icon_link_del.png" />
+    <None Include="Images\icon_link_add.png" />
+    <None Include="Images\icon_qr_code.png" />
+    <None Include="Images\mini_icon_refresh2.png" />
+    <None Include="Images\icon_upload.png" />
+    <None Include="Images\icon_update.png" />
+    <None Include="Images\icon_settings.png" />
+    <None Include="Images\icon_refresh2.png" />
+    <None Include="Images\icon_refresh.png" />
+    <None Include="Images\icon_open_folder2.png" />
+    <None Include="Images\icon_ok_color.png" />
+    <None Include="Images\icon_ok.png" />
+    <None Include="Images\icon_menu.png" />
+    <None Include="Images\icon_marker.png" />
+    <None Include="Images\icon_light.png" />
+    <None Include="Images\icon_info.png" />
+    <None Include="Images\icon_home.png" />
+    <None Include="Images\icon_folder2.png" />
+    <None Include="Images\icon_filter.png" />
+    <None Include="Images\icon_file2.png" />
+    <None Include="Images\icon_edit.png" />
+    <None Include="Images\icon_download.png" />
+    <None Include="Images\icon_delete.png" />
+    <None Include="Images\icon_contact.png" />
+    <None Include="Images\icon_clock.png" />
+    <None Include="Images\icon_cancel2.png" />
+    <None Include="Images\icon_cancel_color.png" />
+    <None Include="Images\icon_cancel.png" />
+    <None Include="Images\icon_calendar.png" />
+    <None Include="Images\icon_add.png" />
+    <None Include="Images\icon_connection.png" />
+    <None Include="Images\icon_disable.png" />
+    <Content Include="Images\icon_file.png" />
+    <Content Include="Images\icon_folder.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
